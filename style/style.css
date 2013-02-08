@@ -1,0 +1,602 @@
+/*
+ *     Licensed to UbiCollab.org under one or more contributor
+ *     license agreements.  See the NOTICE file distributed 
+ *     with this work for additional information regarding
+ *     copyright ownership. UbiCollab.org licenses this file
+ *     to you under the Apache License, Version 2.0 (the "License");
+ *     you may not use this file except in compliance
+ *     with the License. You may obtain a copy of the License at
+ * 
+ *     		http://www.apache.org/licenses/LICENSE-2.0
+ *     
+ *     Unless required by applicable law or agreed to in writing,
+ *     software distributed under the License is distributed on an
+ *     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *     KIND, either express or implied.  See the License for the
+ *     specific language governing permissions and limitations
+ *     under the License.
+ */
+/* General syles */
+html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: #F5F5EC;
+  color: #47433F;}
+
+p
+{ padding: 0 0 0 0;
+  line-height: 1.7em;}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ color: #362C20;
+  padding: 0 0 5px 0;}
+
+h1, h4
+{ font: normal 160% serif;
+  margin: 0 0 15px 0;
+  padding: 15px 20px 5px 0;
+  color: #444;
+  text-transform: uppercase;}
+
+h2, h5
+{ padding: 0 0 5px 0;
+  font: normal 110% arial;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #A4AA04;}
+
+h3, h6
+{ color: #888;
+  font: normal 95% arial;
+  letter-spacing: 0;
+  padding: 0 0 15px 0;}
+
+h4
+{ color: #777;}
+
+h5, h6
+{ color: #FFA201;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: underline;
+  color: #05C5E1;}
+
+a:hover
+{ text-decoration: none;}
+
+blockquote
+{ margin: 20px 0; 
+  padding: 10px 20px 0 20px;
+  border: 1px solid #E5E5DB;
+  background: #FFF;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: square;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 5px;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+/* END General syles */
+
+#main, #logo, #menubar, #site_content, #footer
+{ margin-left: auto; 
+  margin-right: auto;}
+
+#main
+{ padding-bottom: 20px;}
+
+/* Header specific syles */
+#header
+{ background: #333;
+  height: 170px;
+  margin-bottom: 30px;}
+
+#logo
+{ width: 840px;
+  position: relative;
+  height: 114px;}
+
+#logo #logo_text 
+{ position: absolute; 
+  top: 10px;
+  left: 0;}
+
+#logo h1, #logo h2
+{ font: normal 300% "century gothic", arial, sans-serif;
+  border-bottom: 0;
+  text-transform: none;
+  margin: 0;}
+
+#logo_text h1
+{ padding: 12px 0 0 0;
+  color: #FFF;
+  letter-spacing: 0.1em;}
+
+#logo_text h2
+{ font-size: 120%;
+  padding: 4px 0 0 0;
+  color: #A8AA94;}
+/* END Header specific syles */
+
+/* Meny specific syles */
+#menubar
+{ width: 875px;
+  height: 50px;
+  padding: 12px 0 0 0px;
+  background: transparent;} 
+
+ul#menu
+{ float: left;}
+
+ul#menu li
+{ float: left;
+  margin: 5px 0 0 0;
+  padding: 0 0 0 0px;
+  list-style: none;}
+
+ul#menu li a
+{ letter-spacing: 0.1em;
+  font: normal 100% serif;
+  display: block; 
+  float: left; 
+  height: 26px;
+  padding: 11px 22px 0px 22px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  background: #555;
+  text-decoration: none;
+  margin-right: 3px;} 
+
+ul#menu li a:hover
+{ color: #FFF;
+  background: #444;}
+
+ul#menu li.selected a
+{ color: #000;
+  background: #F4F4EC;}
+/* END Meny specific syles */
+
+#site_content
+{ width: 858px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 10px 20px 20px 40px;
+  background: #FFF;
+  border: 1px solid #E5E5DB;} 
+
+#content
+{ text-align: left;
+  width: 830px;
+  padding: 0;}
+
+/* Footer specific styles */
+#footer
+{ width: 916px;
+  font-family: sans-serif;
+  font-size: 90%;
+  height: 28px;
+  margin-top: 20px;
+  padding: 20px 0 5px 0;
+  text-align: center; 
+  background: transparent;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;}
+
+#footer a
+{ color: #888;
+  text-decoration: none;}
+
+#footer a:hover
+{ color: #000;
+  text-decoration: none;}
+
+.orange{ 
+	color: #FF7A0F;
+}
+div.alert {
+	color: #333;
+	background-color: white;
+	padding: 3px 0px 0px 35px;
+	overflow: hidden;
+	min-height: 28px;
+	position: relative;
+}
+div.alert.success {
+	background-image:url(../images/check-big.png);
+	background-repeat:no-repeat;
+	background-position: 7px 7px;
+	background-color: #E6F8DD;
+}
+div.alert.failure {
+	background-image:url(../images/delete-big.png);
+	background-repeat:no-repeat;
+	background-position: 7px 7px;
+	background-color: #FEE;
+}
+div.alert p, div.alert h3 {
+	font-size:13px;
+	margin: 7px 21px 5px 7px;
+}
+
+
+/* Form specific styles */
+.form_settings
+{ margin: 15px 0 0 0;}
+
+.form_settings p
+{ padding: 0 0 4px 0;}
+
+.form_settings span
+{ float: left; 
+  width: 200px; 
+  text-align: left;}
+  
+.form_settings input, .form_settings textarea
+{ padding: 2px; 
+  width: 299px; 
+  font: 100% arial; 
+  border: 1px solid #E5E5DB; 
+  background: #FFF; 
+  color: #47433F;}
+  
+.form_settings .submit
+{ font: 100% arial; 
+  border: 1px solid; 
+  width: 99px; 
+  margin: 0 0 0 206px; 
+  height: 35px;
+  padding: 5px 0 5px 0;
+  cursor: pointer; 
+  background: #555; 
+  color: #FFF;}
+  
+.form_settings .change
+{ font: 100% arial; 
+  border: 1px solid; 
+  width: 99px; 
+  height: 20px;
+  cursor: pointer; 
+  background: #555; 
+  color: #FFF;
+ }
+  
+.change
+{ font: 100% arial; 
+  border: 1px solid; 
+  width: 99px; 
+  height: 20px;
+  cursor: pointer; 
+  background: #555; 
+  color: #FFF;
+ }
+
+.form_settings textarea
+{ font: 100% arial; 
+  width: 599px;
+  height: 400px;}
+
+.form_settings select
+{ width: 304px;}
+
+.form_settings .checkbox
+{ margin: 4px 0; 
+  padding: 0; 
+  width: 14px;
+  border: 0;
+  background: none;}
+/* END Form specific styles */
+
+.separator
+{ width: 100%;
+  height: 0;
+  border-top: 1px solid #D9D5CF;
+  border-bottom: 1px solid #FFF;
+  margin: 0 0 20px 0;}
+
+/* Table specific styles */
+table
+{ margin: 10px 0 30px 0;
+  overflow: auto;}
+
+table tr th, table tr td
+{ text-align: left;
+  background: #555;
+  color: #FFF;
+  overflow: auto;
+  padding: 7px 4px;}
+  
+table tr td
+{ background: #F5F5EC;
+  color: #47433F;
+  border-top: 1px solid #FFF;
+  overflow: auto;}
+ /* END Table specific styles */
+ 
+ /* Error specific styles */ 
+.overlay{
+    background:transparent url(../../images/overlay.png) repeat top left;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:100;
+}
+
+.box{
+    position:fixed;
+    top:-200px;
+    left:20%;
+    right:20%;
+    background-color:#fff;
+    color:#7F7F7F;
+    padding:20px;
+    border:2px solid #ccc;
+    -moz-border-radius: 20px;
+    -webkit-border-radius:20px;
+    -khtml-border-radius:20px;
+    -moz-box-shadow: 0 1px 5px #333;
+    -webkit-box-shadow: 0 1px 5px #333;
+    z-index:101;
+}
+
+.box h1{
+    border-bottom: 1px dashed #7F7F7F;
+    margin:-20px -20px 0px -20px;
+    padding:10px;
+    background-color:#FFEFEF;
+    color:#EF7777;
+    -moz-border-radius:20px 20px 0px 0px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -khtml-border-top-left-radius: 20px;
+    -khtml-border-top-right-radius: 20px;
+}
+/* END Error specific styles */
+/* Tabs with JQuery specific styles */
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #F5F5EC;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #E0E0E0;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #FFFFFF;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+
+.tab_container {
+	text-align:left;
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+}
+.tab_content {
+	padding: 20px;
+	font-size: 1.2em;
+}
+/* END Tabs specific styles */
+
+/* Tabs without JQuery specific styles 
+	This is for when the developers want to write custom tabs without automatic tabselect from JQuery
+*/
+
+ul.tabs_no_js {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs_no_js li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #F5F5EC;
+}
+ul.tabs_no_js li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs_no_js li a:hover {
+	background: #E0E0E0;
+}
+html ul.tabs_no_js li.active, html ul.tabs_no_js li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #FFFFFF;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+/* END Tabs without JQuery specific styles */
+
+/* User-suggestions specific styles */
+.suggestionsBox {
+	position: absolute;
+	left: 200px;
+	top:0px;
+	margin: 26px 0px 0px 0px;
+	width: 200px;
+	padding:0px;
+	background-color: #000;
+	border-top: 3px solid #000;
+	color: #fff;
+}
+.suggestionList {
+	margin: 0px;
+	padding: 0px;
+}
+.suggestionList ul li {
+	list-style:none;
+	margin: 0px;
+	padding: 6px;
+	border-bottom:1px dotted #666;
+	cursor: pointer;
+}
+.suggestionList ul li:hover {
+	background-color: #FC3;
+	color:#000;
+}
+.load{
+	background-image:url(images/loader.gif);
+	background-position:right;
+	background-repeat:no-repeat;
+}
+/* END User-suggestions specific styles */
+
+/* Screenshot Slideshow styles */
+#gallery {
+}
+#gallery ul { list-style: none; }
+#gallery ul li { display: inline; }
+#gallery ul img {
+	border-width: 5px;
+}
+#gallery ul a:hover img {
+	border-width: 5px;
+	color: #fff;
+}
+/* END screenshot slideshow styles */
+
+/* Spark-bar */
+
+/* END spark-bar */
+.spark-bar {
+	height: 4px;
+	margin: 2px 0;
+	margin-top: 2px;
+	margin-right: 0px;
+	margin-bottom: 2px;
+	margin-left: 0px;
+	border: 1px solid #CCC;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	border-left-color: #CCC;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-top-left-radius: 3px 3px;
+	border-top-right-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	border-bottom-left-radius: 3px 3px;	
+}
+.spark-bar-up {
+	float: left;
+	height: 4px;
+	border-right: 1px solid white;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: white;
+	background: #060;
+	background-image: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: #060;	
+}
+.spark-bar-down {
+	float: right;
+	height: 4px;
+	margin-right: -1px;
+	background: #C00;
+	background-image: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: #C00;
+}
+
+.edit_text {
+	width: 600px;
+}
+
+/* Tag cloud styles */
+.tag_cloud { padding: 3px; text-decoration: none; }
+.tag_cloud:link  { color: #FF7A0F; }
+.tag_cloud:visited { color: #FF7A0F; }
+.tag_cloud:hover { color: #FF7A0F; }
+.tag_cloud:active { color: #FF7A0F; }
+/* END Tag cloud styles */

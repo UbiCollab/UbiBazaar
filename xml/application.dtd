@@ -1,0 +1,18 @@
+
+<!ELEMENT application (name, description, developer+, release*, tags?, dependencies?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT developer (#PCDATA)>
+
+<!ELEMENT release (release_date, platform, changelog, version, file_url)>
+<!ELEMENT release_date (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT changelog (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT file_url (#PCDATA)>
+
+<!ELEMENT tags (tag*)>
+<!ELEMENT tag (#PCDATA)>
+
+<!ELEMENT dependencies (dependency*)>
+<!ELEMENT dependency (#PCDATA)>

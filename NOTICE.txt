@@ -1,0 +1,7 @@
+﻿UbiCollab UbiHOme
+Copyright [2011] UbiCollab.org
+
+This product includes software developed at
+UbiCollab.org (http://www.ubicollab.org/).
+
+The remainder of the NOTICE file is to be used for required third-party notices
